@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Travel Smart - Explore the World</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="./styles/Styles.css">
+    <link rel="stylesheet" href="./styles/nav.css">
+</head>
+<body>
+    <!-- ======================== TOP INFO BAR SECTION Start ======================= -->
+    <div class="top-bar" id="top-bar">
+
+    </div>
+    <!-- ======================== TOP INFO BAR SECTION End ======================= -->
+
+    <!-- =========================== MAIN HEADER SECTION ======================== -->
+    <header class="main-header" id="main-header">
+
+    </header>
+    <!-- ============================ Header Section End ======================= -->
+
+    <!-- ============================ Feedback Section Start ======================= -->
+<div class="travel-header-banner">
+    <div class="header-image-overlay"></div>
+    <img src="assets/Images/Feedback image Beautiful beach.avif" 
+         alt="Beautiful beach with palm trees" 
+         class="header-background-img">
+    <div class="header-text-container">
+        <h1 class="main-header-title">Share Your Travel Experience</h1>
+        <p class="header-subtext">Your feedback helps us create better journeys for everyone</p>
+    </div>
+</div>
+
+<!-- Main Content Container -->
+<main class="feedback-content-wrapper">
+    <!-- Feedback Form -->
+    <form id="travelFeedbackForm" class="feedback-form-container">
+        <!-- Name Input Field -->
+        <div class="input-field-group">
+            <label for="travelerName" class="input-field-label">Full Name</label>
+            <input type="text" id="travelerName" name="travelerName" class="text-input-field" placeholder="John Smith">
+            <span class="validation-error" id="nameValidationError"></span>
+        </div>
+
+        <!-- Email Input Field -->
+        <div class="input-field-group">
+            <label for="travelerEmail" class="input-field-label">Email Address</label>
+            <input type="email" id="travelerEmail" name="travelerEmail" class="text-input-field" placeholder="john@example.com">
+            <span class="validation-error" id="emailValidationError"></span>
+        </div>
+
+        <!-- Feedback Type Dropdown -->
+        <div class="input-field-group">
+            <label class="input-field-label">Type of Feedback</label>
+            <select id="feedbackType" class="dropdown-select-field">
+                <option value="" disabled selected>Select feedback category</option>
+                <option value="website">Website Experience</option>
+                <option value="booking">Booking Process</option>
+                <option value="flights">Flight Experience</option>
+                <option value="hotels">Hotel Stays</option>
+                <option value="customer-service">Customer Service</option>
+                <option value="suggestions">Suggestions</option>
+            </select>
+        </div>
+
+        <!-- Star Rating Component -->
+        <div class="input-field-group">
+            <label class="input-field-label">Overall Satisfaction</label>
+            <div class="rating-stars-container">
+                <span class="single-star" data-value="1">☆</span>
+                <span class="single-star" data-value="2">☆</span>
+                <span class="single-star" data-value="3">☆</span>
+                <span class="single-star" data-value="4">☆</span>
+                <span class="single-star" data-value="5">☆</span>
+                <input type="hidden" id="selectedRating" name="rating" value="0">
+            </div>
+            <div class="rating-labels">
+                <span>Poor</span>
+                <span>Fair</span>
+                <span>Good</span>
+                <span>Very Good</span>
+                <span>Excellent</span>
+            </div>
+        </div>
+
+        <!-- Emoji Feedback Section -->
+        <div class="input-field-group">
+            <label class="input-field-label">How was your experience?</label>
+            <div class="emoji-feedback-container">
+                <input type="radio" name="experienceMood" id="ecstaticMood" value="ecstatic" class="emoji-radio-input">
+                <label for="ecstaticMood" class="emoji-choice-label">🤩</label>
+
+                <input type="radio" name="experienceMood" id="happyMood" value="happy" class="emoji-radio-input">
+                <label for="happyMood" class="emoji-choice-label">😊</label>
+
+                <input type="radio" name="experienceMood" id="neutralMood" value="neutral" class="emoji-radio-input">
+                <label for="neutralMood" class="emoji-choice-label">😐</label>
+
+                <input type="radio" name="experienceMood" id="disappointedMood" value="disappointed" class="emoji-radio-input">
+                <label for="disappointedMood" class="emoji-choice-label">😞</label>
+
+                <input type="radio" name="experienceMood" id="angryMood" value="angry" class="emoji-radio-input">
+                <label for="angryMood" class="emoji-choice-label">😡</label>
+            </div>
+        </div>
+
+        <!-- Detailed Feedback Textarea -->
+        <div class="input-field-group">
+            <label for="detailedFeedback" class="input-field-label">Detailed Feedback</label>
+            <textarea id="detailedFeedback" name="detailedFeedback" class="feedback-textarea" placeholder="Tell us about your travel experience... What did you enjoy? What could we improve?"></textarea>
+            <span class="validation-error" id="feedbackValidationError"></span>
+        </div>
+
+        <!-- Recommendation Radio Buttons -->
+        <div class="input-field-group">
+            <label class="input-field-label">Would you recommend TravelEase to others?</label>
+            <div class="recommendation-options">
+                <input type="radio" name="recommend" id="definitelyYes" value="definitely" class="recommend-radio-input">
+                <label for="definitelyYes" class="recommend-option-label">Definitely</label>
+
+                <input type="radio" name="recommend" id="probablyYes" value="probably" class="recommend-radio-input">
+                <label for="probablyYes" class="recommend-option-label">Probably</label>
+
+                <input type="radio" name="recommend" id="notSure" value="unsure" class="recommend-radio-input">
+                <label for="notSure" class="recommend-option-label">Not Sure</label>
+
+                <input type="radio" name="recommend" id="probablyNot" value="unlikely" class="recommend-radio-input">
+                <label for="probablyNot" class="recommend-option-label">Probably Not</label>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="primary-submit-button">
+            <span class="button-icon">✈️</span> Submit Your Feedback
+        </button>
+    </form>
+
+    <!-- Success Message Banner (Hidden by Default) -->
+    <div id="submissionConfirmation" class="success-notification-banner">
+        <p class="confirmation-message">🎉 Thank you for your feedback! We appreciate you helping us improve our services.</p>
+    </div>
+
+    <!-- =================== Testimonials section Start ================== -->
+    <section class="testimonials">
+        <div class="section-header">
+            <h2 class="Tes-heading"><i class="fas fa-comment-alt"></i> What Our Users Say</h2>
+            <p class="section-description">Real feedback from our bidders and sellers</p>
+        </div>
+
+        <div class="carousel-wrapper">
+            <div class="testimonials-carousel">
+                <!-- Testimonial Items -->
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <img src="assets/Images/Testimonials Images/Ali Raza.jpg" alt="Ali Raza">
+                            </div>
+                            <div class="user-details">
+                                <h3 class="user-name">Ali Raza</h3>
+                                <p class="user-role">Top Bidder</p>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5</span>
+                        </div>
+                        <p class="review-text">"I've won 3 auctions on this platform and each experience has been
+                            fantastic. The bidding process is smooth and transparent."</p>
+                        <div class="review-footer">
+                            <span class="review-date"><i class="far fa-calendar-alt"></i> 20 July 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <img src="assets/Images/Testimonials Images/Sarah Khan.jpg" alt="Sarah Khan">
+                            </div>
+                            <div class="user-details">
+                                <h3 class="user-name">Sarah Khan</h3>
+                                <p class="user-role">Verified Seller</p>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                        <p class="review-text">"Sold my vintage watch collection here and got better prices than I
+                            expected. The customer support team is very responsive."</p>
+                        <div class="review-footer">
+                            <span class="review-date"><i class="far fa-calendar-alt"></i> 18 July 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <img src="assets/Images/Testimonials Images/Asif.jpg" alt="Asif">
+                            </div>
+                            <div class="user-details">
+                                <h3 class="user-name">Asif</h3>
+                                <p class="user-role">Frequent Buyer</p>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0</span>
+                        </div>
+                        <p class="review-text">"The live auctions are exciting! I love the real-time bidding feature.
+                            Won a rare painting last week at a great price."</p>
+                        <div class="review-footer">
+                            <span class="review-date"><i class="far fa-calendar-alt"></i> 15 July 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="user-details">
+                                <h3 class="user-name">Emma Johnson</h3>
+                                <p class="user-role">Verified Seller</p>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                        <p class="review-text">"As a first-time seller, I was nervous, but the platform made it so easy.
+                            My designer bags sold within 2 days at premium prices!"</p>
+                        <div class="review-footer">
+                            <span class="review-date"><i class="far fa-calendar-alt"></i> 12 July 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <img src="assets/Images/Testimonials Images/Jassmen.jpg" alt="Jassmen">
+                            </div>
+                            <div class="user-details">
+                                <h3 class="user-name">Jassmen</h3>
+                                <p class="user-role">Car Collector</p>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                        <p class="review-text">"Found my dream vintage Ferrari through this platform. The verification
+                            process gave me confidence in the purchase."</p>
+                        <div class="review-footer">
+                            <span class="review-date"><i class="far fa-calendar-alt"></i> 10 July 2025</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="testimonial-card">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <img src="assets/Images/Testimonials Images/Jhon.jpg" alt="Jhon">
+                            </div>
+                            <div class="user-details">
+                                <h3 class="user-name">Jhon</h3>
+                                <p class="user-role">Antique Dealer</p>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0</span>
+                        </div>
+                        <p class="review-text">"The trending auctions feature helps me discover valuable items. I've
+                            expanded my antique collection significantly."</p>
+                        <div class="review-footer">
+                            <span class="review-date"><i class="far fa-calendar-alt"></i> 8 July 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn prev-btn testimonials-prev" aria-label="Previous"><i
+                    class="fas fa-chevron-left"></i></button>
+            <button class="carousel-btn next-btn testimonials-next" aria-label="Next"><i
+                    class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div class="view-all-container">
+            <a href="#" class="view-all-btn">Read All Reviews <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+    <!-- =================== Testimonials section End ================== -->
+
+    <!-- Feedback Statistics Section Start -->
+    <div class="feedback-statistics">
+        <h3 class="statistics-title">TravelEase Satisfaction Ratings</h3>
+        <div class="statistics-bars-container">
+            <!-- 5 Star Rating Bar -->
+            <div class="statistics-bar-item">
+                <span class="bar-description">5 Star Experiences</span>
+                <div class="percentage-bar-wrapper">
+                    <div class="percentage-bar-fill" style="width: 68%;"></div>
+                    <span class="percentage-value">68%</span>
+                </div>
+            </div>
+            
+            <!-- 4 Star Rating Bar -->
+            <div class="statistics-bar-item">
+                <span class="bar-description">4 Star Experiences</span>
+                <div class="percentage-bar-wrapper">
+                    <div class="percentage-bar-fill" style="width: 22%;"></div>
+                    <span class="percentage-value">22%</span>
+                </div>
+            </div>
+            
+            <!-- 3 Star Rating Bar -->
+            <div class="statistics-bar-item">
+                <span class="bar-description">3 Star Experiences</span>
+                <div class="percentage-bar-wrapper">
+                    <div class="percentage-bar-fill" style="width: 7%;"></div>
+                    <span class="percentage-value">7%</span>
+                </div>
+            </div>
+            
+            <!-- 2 Star Rating Bar -->
+            <div class="statistics-bar-item">
+                <span class="bar-description">2 Star Experiences</span>
+                <div class="percentage-bar-wrapper">
+                    <div class="percentage-bar-fill" style="width: 2%;"></div>
+                    <span class="percentage-value">2%</span>
+                </div>
+            </div>
+            
+            <!-- 1 Star Rating Bar -->
+            <div class="statistics-bar-item">
+                <span class="bar-description">1 Star Experiences</span>
+                <div class="percentage-bar-wrapper">
+                    <div class="percentage-bar-fill" style="width: 1%;"></div>
+                    <span class="percentage-value">1%</span>
+                </div>
+            </div>
+        </div>
+        <p class="statistics-note">Based on 12,487 traveler reviews from January 2024</p>
+    </div>
+        <!-- Feedback Statistics Section End -->
+
+    <!-- Support Contact Section Start -->
+    <div class="support-contact-prompt">
+        <p class="support-message">Need immediate assistance with your travel plans?</p>
+        <a href="contact.html" class="support-action-button">Contact Our Travel Experts</a>
+        <p class="support-availability">Available 24/7 via phone, chat, or email</p>
+    </div>
+</main>
+    <!-- Support Contact Section End -->
+
+    <!-- ============================ Feedback Section End ======================= -->
+
+    <!-- ================= Footer Section Start ==================== -->
+    <footer class="travel-footer">
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-about">
+                <h3>Travel Explorer</h3>
+                <p>Making your travel dreams a reality with personalized service and unforgettable experiences since
+                    2010. Discover the world with us!</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span class="tooltip">Facebook</span>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span class="tooltip">Instagram</span>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span class="tooltip">Twitter</span>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                        <span class="tooltip">YouTube</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-map-marked-alt"></i> Turiest</a></li>
+                    <li><a href="#"><i class="fas fa-suitcase"></i> Packages</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                    <li><a href="#"><i class="fas fa-comment-dots"></i> Testimonials</a></li>
+                    <li><a href="sitemap.html"><i class="fas fa-comment-dots"></i> Sitemap</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Adventure St, Travel City, TC 12345</li>
+                    <li><i class="fas fa-phone"></i> +1 (123) 456-7890</li>
+                    <li><i class="fas fa-envelope"></i> info@travelexplorer.com</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+                <h3>Travel Newsletter</h3>
+                <p>Subscribe for exclusive travel deals, tips and destination guides</p>
+                <form id="travel-newsletter">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Travel Explorer. All rights reserved. <span>Adventure • Discovery • Memories</span></p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Travel Insurance</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Book Now Button -->
+    <div class="floating-book">
+        <button class="btn-travel-primary">
+            <i class="fas fa-plane"></i> <a href="#">Book Now</a>
+        </button>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Floating Contact Button (Right Side) -->
+    <div class="floating-contact">
+        <button class="btn-travel-contact">
+            <i class="fas fa-headset"></i> Need Help?
+        </button>
+    </div>
+    <!-- ================= Footer Section End ==================== -->
+        <script src="./scripts/script.js"></script>
+    <script src="./scripts/navbar.js"></script>
+</body>
+
+</html>

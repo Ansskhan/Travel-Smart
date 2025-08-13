@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tours</title>
+    <link rel="stylesheet" href="./styles/tours.css">
+    <link rel="stylesheet" href="./styles/styles1.css">
+    <link rel="stylesheet" href="./styles/sliderbar.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .packages-grid .package-card {
+            overflow: hidden;
+            height: 450px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ======================== TOP INFO BAR SECTION Start ======================= -->
+    <div class="top-bar" id="top-bar">
+
+    </div>
+    <!-- ======================== TOP INFO BAR SECTION End ======================= -->
+
+    <!-- =========================== MAIN HEADER SECTION ======================== -->
+    <header class="main-header" id="main-header">
+
+    </header>
+    <!-- ============================ Header Section End ======================= -->
+    <!-- Mobile Filter Toggle Button -->
+    <button class="auction-mobile-filter-toggle">
+        <i class="fas fa-filter"></i> Filters
+    </button>
+
+    <!-- Overlay for mobile filters -->
+    <div class="auction-sidebar-overlay"></div>
+
+    <div class="auction-container">
+        <!-- Filters Sidebar -->
+        <aside class="auction-filters-sidebar">
+            <div class="auction-filters-header">
+                <div style="display: flex; gap: 13px;">
+                    <span class="auction-close-filters" style="margin-top: 4px;">&times;</span>
+                    <h2 class="auction-filters-title">Filters</h2>
+                </div>
+                <span class="auction-reset-filters">Reset All</span>
+            </div>
+
+            <!-- Categories -->
+            <div class="auction-filter-group">
+                <h3 class="auction-filter-title">Categories <i class="fas fa-chevron-down"></i></h3>
+                <div class="auction-filter-options">
+                    <label class="auction-filter-option">
+                        <input type="checkbox" checked> <a href="#">Group Tours</a>
+                    </label>
+                    <label class="auction-filter-option">
+                        <input type="checkbox" checked> <a href="#">Honeymoon</a>
+                    </label>
+                    <label class="auction-filter-option">
+                        <input type="checkbox" checked> <a href="#">Highlighted Tours</a>
+                    </label>
+                    <label class="auction-filter-option">
+                        <input type="checkbox" checked> <a href="#">Adventure Trips</a>
+                    </label>
+                    <label class="auction-filter-option">
+                        <input type="checkbox" checked> <a href="#">Luxury Travel</a>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Price Range -->
+            <div class="auction-filter-group">
+                <h3 class="auction-filter-title">Price Range <i class="fas fa-chevron-down"></i></h3>
+                <div class="auction-price-range">
+                    <input type="number" class="auction-price-input" placeholder="Min" min="0" id="auctionMinPrice">
+                    <input type="number" class="auction-price-input" placeholder="Max" min="0" id="auctionMaxPrice">
+                </div>
+                <div class="auction-price-slider-container">
+                    <div class="auction-price-slider">
+                        <div class="auction-slider-progress"></div>
+                        <span class="auction-slider-handle auction-slider-min"></span>
+                        <span class="auction-slider-handle auction-slider-max"></span>
+                    </div>
+                    <div class="auction-price-slider-buttons">
+                        <button class="auction-price-slider-btn" data-min="0" data-max="1000">$0 - $1K</button>
+                        <button class="auction-price-slider-btn" data-min="1000" data-max="3000">$1K - $3K</button>
+                        <button class="auction-price-slider-btn" data-min="3000" data-max="7000">$3K - $7K</button>
+                        <button class="auction-price-slider-btn" data-min="7000" data-max="15000">$7K - $15K</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Rating -->
+            <div class="auction-filter-group">
+                <h3 class="auction-filter-title">Guest Rating <i class="fas fa-chevron-down"></i></h3>
+                <div class="auction-filter-options">
+                    <label class="auction-filter-option"> 
+                        <input type="checkbox"> 5 Stars
+                    </label>
+                    <label class="auction-filter-option">
+                        <input type="checkbox"> 4 Stars & Up
+                    </label>
+                    <label class="auction-filter-option">
+                        <input type="checkbox"> 3 Stars & Up
+                    </label>
+                </div>
+            </div>
+            <button class="auction-apply-filters-btn">Apply Filters</button>
+        </aside>
+
+        <div class="d-flex flex-column " style="text-align: center;">
+            <!-- Main Content -->
+            <div class="welcome-text text-center" style="margin-top: 50px;margin-bottom: 50px;">
+                <h1>Highlighted Tours – Discover the World’s Gems</h1>
+                <p>Discover our handpicked tours designed for adventure seekers, culture lovers, and relaxation
+                    enthusiasts alike. From breathtaking mountain escapes to sun-kissed beaches and vibrant city
+                    explorations, each journey promises unforgettable memories. Let us guide you to the most exciting
+                    experiences the world has to offer.</p>
+                <!-- <button id="learnMoreBtn" class="learn-more-btn">Learn More</button> -->
+            </div>
+            <!-- Grid layout for package cards -->
+            <div class="packages-grid" style="margin: 30px;" id="cardContainer">
+                <div class="package-card" data-category="Highlighted Tours">
+                    <div class="discount-badge" style="position: absolute;">28% OFF</div>
+                    <div class="package-rating" style="margin-bottom:5px;">
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                    </div>
+                    <img src="./images/paris-2499022_1280.jpg" alt="Mountain Adventure" loading="lazy">
+                    <div class="package-details">
+                        <h3>Paris Romance</h3>
+                        <p class="package-description">Romantic streets, Eiffel Tower sunsets, rich art museums, and
+                            cozy cafés make Paris unforgettable.
+                        </p>
+                        <div class="price-container">
+                            <span class="original-price">$4,000</span>
+                            <span class="discounted-price">$2,880</span>
+                        </div>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+                    <div class="package-card" data-category="Highlighted Tours">
+                        <div class="discount-badge">22% OFF</div>
+                        <div class="package-rating" style="margin-bottom:5px;">
+                            <span class="fa fa-star" style="color:gold;"></span>
+                            <span class="fa fa-star" style="color:gold;"></span>
+                            <span class="fa fa-star" style="color:gold;"></span>
+                            <span class="fa fa-star-half" style="color:gold;"></span>
+                        </div>
+                    <img src="./images/lower-kachura-lake-2377179_1280.jpg" alt="Mountain Adventure" loading="lazy">
+                    <div class="package-details">
+                        <h3>Skardu Valley</h3>
+                        <p class="package-description">Snowy peaks, crystal-clear lakes, and peaceful valleys create a
+                            paradise for nature lovers.
+                        </p>
+                        <div class="price-container">
+                            <span class="original-price">$3,000</span>
+                            <span class="discounted-price">$2,340</span>
+                        </div>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="package-card" data-category="Highlighted Tours">
+                    <div class="discount-badge">20% OFF</div>
+                    <div class="package-rating" style="margin-bottom:5px;">
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star-half" style="color:gold;"></span>
+                    </div>
+                    <img src="./images/tokyo-8650941_1280.jpg" alt="Mountain Adventure" loading="lazy">
+                    <div class="package-details">
+                        <h3>Tokyo Lights</h3>
+                        <p class="package-description">A vibrant mix of ancient temples, neon-lit streets, and
+                            mouth-watering Japanese street food.
+                        </p>
+                        <div class="price-container">
+                            <span class="original-price">$4,500</span>
+                            <span class="discounted-price">$3,690</span>
+                        </div>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="package-card" data-category="Highlighted Tours">
+                        <div class="discount-badge">28% OFF</div>
+                        <div class="package-rating" style="margin-bottom:5px;">
+                            <span class="fa fa-star" style="color:gold;"></span>
+                            <span class="fa fa-star" style="color:gold;"></span>
+                            <span class="fa fa-star" style="color:gold;"></span>
+                            <span class="fa fa-star" style="color:gold;"></span>
+                        </div>
+                    <img src="./images/topkapi-palace-museum-7353338_1280.jpg" alt="Mountain Adventure" loading="lazy">
+                    <div class="package-details">
+                        <h3>Istanbul Dream</h3>
+                        <p class="package-description">Historic mosques, bustling bazaars, and scenic Bosphorus cruises
+                            blend culture with charm.
+                        </p>
+                        <div class="price-container">
+                            <span class="original-price">$3,500</span>
+                            <span class="discounted-price">$2,520</span>
+                        </div>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="package-card" data-category="Highlighted Tours">
+                        <div class="discount-badge">15% OFF</div>
+                        <div class="package-rating" style="margin-bottom:5px;">
+                            <span class="fa fa-star" style="color:gold;"></span>
+                            <span class="fa fa-star" style="color:gold;"></span>
+                            <span class="fa fa-star" style="color:gold;"></span>
+                            <span class="fa fa-star" style="color:gold;"></span>
+                            <span class="fa fa-star" style="color:gold;"></span>
+                        </div>
+                    <img src="./images/New york.jpg" alt="Mountain Adventure" loading="lazy">
+                    <div class="package-details">
+                        <h3>New York</h3>
+                        <p class="package-description">Towering skyscrapers, lush parks, and endless attractions keep
+                            the city alive day and night.
+                        </p>
+                        <div class="price-container">
+                            <span class="original-price">$4,000</span>
+                            <span class="discounted-price">$3,400</span>
+                        </div>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="package-card" data-category="Highlighted Tours">
+                        <div class="discount-badge">25% OFF</div>
+                        <div class="package-rating" style="margin-bottom:5px;">
+                            <span class="fa fa-star" style="color:gold;"></span>
+                            <span class="fa fa-star" style="color:gold;"></span>
+                            <span class="fa fa-star" style="color:gold;"></span>
+                        </div>
+                    <img src="./images/hunza.jpg" alt="Mountain Adventure" loading="lazy">
+                    <div class="package-details">
+                        <h3>Hunza Peaks</h3>
+                        <p class="package-description">Breathtaking mountains, fresh alpine air, and warm village
+                            hospitality welcome every traveler.
+                        </p>
+                        <div class="price-container">
+                            <span class="original-price">$4,200</span>
+                            <span class="discounted-price">$3,150</span>
+                        </div>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="welcome-text text-center" style="margin-top: 50px;margin-bottom: 50px;">
+                <h1>
+                    <i class="fas fa-heart" style="color: #e25555;"></i>
+                    Honeymoon Destinations – Travel Smart
+                </h1>
+                <p>Celebrate your love with unforgettable journeys to the world’s most romantic destinations. From
+                    dreamy beaches to charming cities, our curated honeymoon packages are designed to make every
+                    moment
+                    special.</p>
+                <!-- <button id="learnMoreBtn" class="learn-more-btn">Learn More</button> -->
+            </div>
+            <div class="packages-grid" style="margin: 30px;" id="cardContainer">
+                <div class="package-card" data-category="Honeymoon">
+                    <div class="discount-badge">20% OFF</div>
+                    <div class="package-rating" style="margin-bottom:5px;">
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star-half" style="color:gold;"></span>
+                    </div>
+                    <img src="./images/maldives.jpg" alt="Mountain Adventure" loading="lazy">
+                    <div class="package-details">
+                        <h3>Maldives Bliss</h3>
+                        <p class="package-description">Crystal-clear waters, private overwater villas, and sunsets that
+                            paint the ocean in gold.
+                        </p>
+                        <div class="price-container">
+                            <span class="original-price">$3,200</span>
+                            <span class="discounted-price">$2,560</span>
+                        </div>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="package-card" data-category="Honeymoon">
+                    <div class="discount-badge">18% OFF</div>
+                    <div class="package-rating" style="margin-bottom:5px;">
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star-half" style="color:gold;"></span>
+                    </div>
+                    <img src="./images/santorini.jpg" alt="Mountain Adventure" loading="lazy">
+                    <div class="package-details">
+                        <h3>Santorini Blue</h3>
+                        <p class="package-description">Enjoy breathtaking sunsets, whitewashed houses, blue-domed
+                            churches with your loved one.
+                        </p>
+                        <div class="price-container">
+                            <span class="original-price">$2,800</span>
+                            <span class="discounted-price">$2,296</span>
+                        </div>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="package-card" data-category="Honeymoon">
+                    <div class="discount-badge">22% OFF</div>
+                    <div class="package-rating" style="margin-bottom:5px;">
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star-half" style="color:gold;"></span>
+                    </div>
+                    <img src="./images/venice.jpg" alt="Mountain Adventure" loading="lazy">
+                    <div class="package-details">
+                        <h3>Venice Charm</h3>
+                        <p class="package-description">Gondola rides, charming streets, and candle-lit dinners in the
+                            city
+                            of romance.
+                        </p>
+                        <div class="price-container">
+                            <span class="original-price">$2,500</span>
+                            <span class="discounted-price">$1,950</span>
+                        </div>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="package-card" data-category="Honeymoon">
+                    <div class="discount-badge">30% OFF</div>
+                    <div class="package-rating" style="margin-bottom:5px;">
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                    </div>
+                    <img src="./images/bali.jpg" alt="Mountain Adventure" loading="lazy">
+                    <div class="package-details">
+                        <h3>Bali Haven</h3>
+                        <p class="package-description">Private villas, lush jungles, and serene beaches perfect for
+                            romance.
+                        </p>
+                        <div class="price-container">
+                            <span class="original-price">$1,800</span>
+                            <span class="discounted-price">$1,260</span>
+                        </div>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="package-card" data-category="Honeymoon">
+                    <div class="discount-badge">15% OFF</div>
+                    <div class="package-rating" style="margin-bottom:5px;">
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                    </div>
+                    <img src="./images/paris gateaway.jpg" alt="Mountain Adventure" loading="lazy">
+                    <div class="package-details">
+                        <h3>Paris Lights</h3>
+                        <p class="package-description">Walk hand-in-hand along the Seine, explore the Eiffel Tower, and
+                            enjoy intimate Parisian cafés.
+                        </p>
+                        <div class="price-container">
+                            <span class="original-price">$1,700</span>
+                            <span class="discounted-price">$1,445</span>
+                        </div>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="package-card" data-category="Honeymoon">
+                    <div class="discount-badge">25% OFF</div>
+                    <div class="package-rating" style="margin-bottom:5px;">
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                    </div>
+                    <img src="./images/HUNZA VALLEY.jpg" alt="Mountain Adventure" loading="lazy">
+                    <div class="package-details">
+                        <h3>Hunza Magic</h3>
+                        <p class="package-description">Breathtaking mountains, fresh alpine air, and warm village
+                            hospitality welcome every traveler.
+                        </p>
+                        <div class="price-container">
+                            <span class="original-price">$2,400</span>
+                            <span class="discounted-price">$1,800</span>
+                        </div>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="welcome-text text-center" style="margin-top: 50px;margin-bottom: 50px;">
+                <h1>Group Tour Packages</h1>
+                <p>Travel together, laugh together, and make memories that last a lifetime.
+                    Perfect for friends, families, or colleagues seeking adventure, our group tours are designed for
+                    shared experiences, bonding moments, and unforgettable destinations..</p>
+                <!-- <button id="learnMoreBtn" class="learn-more-btn">Learn More</button> -->
+            </div>
+            <div class="packages-grid" style="margin: 30px;" id="cardContainer">
+                <div class="package-card" data-category="Group Tours">
+                    <div class="discount-badge">30% OFF</div>
+                    <div class="package-rating" style="margin-bottom:5px;">
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star-half" style="color:gold;"></span>
+                    </div>
+                    <img src="./images/EUROPE.jpg" alt="Mountain Adventure" loading="lazy">
+                    <div class="package-details">
+                        <h3>Europe Tour</h3>
+                        <p class="package-description">Discover iconic cities, historic landmarks, and breathtaking
+                            scenery with a fun-loving group.
+                        </p>
+                        <div class="price-container">
+                            <span class="original-price">$1,800</span>
+                            <span class="discounted-price">$1,260</span>
+                        </div>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="package-card" data-category="Group Tours">
+                    <div class="discount-badge">18% OFF</div>
+                    <div class="package-rating" style="margin-bottom:5px;">
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                    </div>
+                    <img src="./images/asian cultural.jpg" alt="Mountain Adventure" loading="lazy">
+                    <div class="package-details">
+                        <h3>Asian Wonders</h3>
+                        <p class="package-description">Immerse yourself in rich traditions, diverse cuisines, and
+                            bustling city life.
+
+                        </p>
+                        <div class="price-container">
+                            <span class="original-price">$1,300</span>
+                            <span class="discounted-price">$1,066</span>
+                        </div>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="package-card" data-category="Group Tours">
+                    <div class="discount-badge">22% OFF</div>
+                    <div class="package-rating" style="margin-bottom:5px;">
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star-half" style="color:gold;"></span>
+                    </div>
+                    <img src="./images/mountains hicking.jpg" alt="Mountain Adventure" loading="lazy">
+                    <div class="package-details">
+                        <h3>Mountain Quest</h3>
+                        <p class="package-description">Join a guided group trek through stunning mountain landscapes and
+                            hidden trails.
+
+                        </p>
+                        <div class="price-container">
+                            <span class="original-price">$900</span>
+                            <span class="discounted-price">$702</span>
+                        </div>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="package-card" data-category="Group Tours">
+                    <div class="discount-badge">28% OFF</div>
+                    <div class="package-rating" style="margin-bottom:5px;">
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                    </div>
+                    <img src="./images/nothern.jpg" alt="Mountain Adventure" loading="lazy">
+                    <div class="package-details">
+                        <h3>Northern Glow</h3>
+                        <p class="package-description">Chase the magical auroras, explore icy landscapes, and enjoy cozy
+                            nights with your group.
+
+                        </p>
+                        <div class="price-container">
+                            <span class="original-price">$2,200</span>
+                            <span class="discounted-price">$1,584</span>
+                        </div>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="package-card" data-category="Group Tours">
+                    <div class="discount-badge">15% OFF</div>
+                    <div class="package-rating" style="margin-bottom:5px;">
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                    </div>
+                    <img src="./images/tropical island.jpg" alt="Mountain Adventure" loading="lazy">
+                    <div class="package-details">
+                        <h3>Island Dream</h3>
+                        <p class="package-description">Relax on pristine beaches, enjoy group activities, and explore
+                            vibrant island culture.
+
+                        </p>
+                        <div class="price-container">
+                            <span class="original-price">$1,500</span>
+                            <span class="discounted-price">$1,275</span>
+                        </div>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+                <div class="package-card" data-category="Group Tours">
+                    <div class="discount-badge">25% OFF</div>
+                    <div class="package-rating" style="margin-bottom:5px;">
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star" style="color:gold;"></span>
+                        <span class="fa fa-star-half" style="color:gold;"></span>
+                    </div>
+                    <img src="./images/desert.jpg" alt="Mountain Adventure" loading="lazy">
+                    <div class="package-details">
+                        <h3>Desert Adventure</h3>
+                        <p class="package-description">Experience thrilling dune bashing, camel rides, and desert nights
+                            under the stars.
+
+                        </p>
+                        <div class="price-container">
+                            <span class="original-price">$800</span>
+                            <span class="discounted-price">$600</span>
+                        </div>
+                        <button class="book-now-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+
+    </div>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/tours.js"></script>
+    <script src="./scripts/navbar.js"></script>
+    <script src="./scripts/search.js"></script>
+    <script src="./scripts/filter.js"></script>
+</body>
+
+</html>

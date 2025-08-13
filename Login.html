@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Travel Smart - Explore the World</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="./styles/Styles.css">
+    <link rel="stylesheet" href="./styles/nav.css">
+</head>
+
+<body>
+    <!-- ======================== TOP INFO BAR SECTION Start ======================= -->
+    <div class="top-bar" id="top-bar">
+
+    </div>
+    <!-- ======================== TOP INFO BAR SECTION End ======================= -->
+
+    <!-- =========================== MAIN HEADER SECTION ======================== -->
+    <header class="main-header" id="main-header">
+
+    </header>
+    <!-- ============================ Header Section End ======================= -->
+
+    <!-- ============================ Login Section Start ======================= -->
+    <div class="auth__container">
+        <!-- App Icon -->
+        <div class="auth__app-icon">
+            <i class="fas fa-user-shield"></i>
+        </div>
+
+        <h1 class="auth__title">Welcome Back!</h1>
+        <p class="auth__subtitle">Please login to continue</p>
+
+        <form class="auth__form">
+            <div class="auth__form-group">
+                <label for="email" class="auth__label">Email Address</label>
+                <i class="fas fa-envelope auth__input-icon"></i>
+                <input type="email" id="email" class="auth__input" placeholder="Enter your email" required>
+            </div>
+
+            <div class="auth__form-group">
+                <label for="password" class="auth__label">Password</label>
+                <i class="fas fa-lock auth__input-icon"></i>
+                <div class="auth__password-wrapper">
+                    <input type="password" id="password" class="auth__input" placeholder="Enter your password" required>
+                    <i class="fas fa-eye auth__password-toggle" title="Show Password"></i>
+                </div>
+            </div>
+
+            <div class="auth__remember-forgot">
+                <label class="auth__remember-me">
+                    <input type="checkbox" class="auth__checkbox"> Remember me
+                </label>
+                <a href="forgot-password.html" class="auth__forgot-password">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="auth__btn auth__btn--login">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </button>
+
+            <div class="auth__divider">
+                <span>or continue with</span>
+            </div>
+
+            <div class="auth__social-login">
+                <a href="#" class="auth__social-btn auth__social-btn--facebook" data-tooltip="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="auth__social-btn auth__social-btn--google" data-tooltip="Google">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="#" class="auth__social-btn auth__social-btn--twitter" data-tooltip="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+
+            <div class="auth__signup-link">
+                Don't have an account? <a href="signup.html" class="auth__link">Sign up</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- ============================ Login Section End ======================= -->
+
+    <!-- ================= Footer Section Start ==================== -->
+    <footer class="travel-footer">
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-about">
+                <h3>Travel Explorer</h3>
+                <p>Making your travel dreams a reality with personalized service and unforgettable experiences since
+                    2010. Discover the world with us!</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span class="tooltip">Facebook</span>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span class="tooltip">Instagram</span>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span class="tooltip">Twitter</span>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                        <span class="tooltip">YouTube</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-map-marked-alt"></i> Turiest</a></li>
+                    <li><a href="#"><i class="fas fa-suitcase"></i> Packages</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                    <li><a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a></li>
+                    <li><a href="sitemap.html"><i class="fas fa-comment-dots"></i> Sitemap</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Adventure St, Travel City, TC 12345</li>
+                    <li><i class="fas fa-phone"></i> +1 (123) 456-7890</li>
+                    <li><i class="fas fa-envelope"></i> info@travelexplorer.com</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+                <h3>Travel Newsletter</h3>
+                <p>Subscribe for exclusive travel deals, tips and destination guides</p>
+                <form id="travel-newsletter">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Travel Explorer. All rights reserved. <span>Adventure • Discovery • Memories</span></p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Travel Insurance</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Book Now Button -->
+    <div class="floating-book">
+        <button class="btn-travel-primary">
+            <i class="fas fa-plane"></i> <a href="#">Book Now</a>
+        </button>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Floating Contact Button (Right Side) -->
+    <div class="floating-contact">
+        <button class="btn-travel-contact">
+            <i class="fas fa-headset"></i> Need Help?
+        </button>
+    </div>
+    <!-- ================= Footer Section End ==================== -->
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/navbar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Travel Smart - Explore the World</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS File -->
+    <link rel="stylesheet" href="./styles/Styles.css">
+    <link rel="stylesheet" href="./styles/nav.css">
+</head>
+<body>
+    <!-- ======================== TOP INFO BAR SECTION Start ======================= -->
+    <div class="top-bar" id="top-bar">
+
+    </div>
+    <!-- ======================== TOP INFO BAR SECTION End ======================= -->
+
+    <!-- =========================== MAIN HEADER SECTION ======================== -->
+    <header class="main-header" id="main-header">
+
+    </header>
+    <!-- ============================ Header Section End ======================= -->
+
+   <!-- ============================ Contact Section Start ======================= -->
+    <!-- Hero/Banner Section -->
+    <div class="contact-banner">
+        <img src="assets/Images/Contact Image Travel background.jpg" 
+             alt="Travel background" class="contact-banner-img">
+        <div class="contact-banner-text">
+            <h1>CONNECT WITH US</h1>
+            <p>We're here to help you plan your dream journey</p>
+        </div>
+    </div>
+
+    <main class="contact-main-container">
+        <!-- Contact Information Cards -->
+        <section class="contact-cards-section">
+            <h2>Contact Information</h2>
+            <div class="contact-cards-wrapper">
+                <div class="contact-card-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                </div>
+                <div class="contact-card-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p><a href="mailto:info@travelsmart.com">info@travelsmart.com</a></p>
+                </div>
+                <div class="contact-card-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Address</h3>
+                    <p>123 Travel Street, Adventure City, 10101</p>
+                </div>
+                <div class="contact-card-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Working Hours</h3>
+                    <p>Mon–Fri, 9 AM – 6 PM</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Office Locations -->
+        <section class="contact-locations">
+            <h2>Our Offices</h2>
+            <div class="contact-grid-container">
+                <div class="contact-location-box">
+                    <h3>New York</h3>
+                    <p>456 Broadway, NY 10013</p>
+                    <p><a href="tel:+12125551234">+1 (212) 555-1234</a></p>
+                </div>
+                <div class="contact-location-box">
+                    <h3>London</h3>
+                    <p>78 Oxford Street, W1D 1BS</p>
+                    <p><a href="tel:+442079876543">+44 20 7987 6543</a></p>
+                </div>
+                <div class="contact-location-box">
+                    <h3>Tokyo</h3>
+                    <p>3-5-1 Marunouchi, Chiyoda-ku</p>
+                    <p><a href="tel:+81332165498">+81 3 3216 5498</a></p>
+                </div>
+                <div class="contact-location-box">
+                    <h3>Sydney</h3>
+                    <p>100 George Street, NSW 2000</p>
+                    <p><a href="tel:+61298765432">+61 2 9876 5432</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form and Map Section -->
+        <section class="contact-form-section">
+            <div class="contact-form-box">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm" class="contact-form">
+                    <div class="contact-input-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="contact-input-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="contact-input-group">
+                        <label for="subject">Subject (Optional)</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="contact-input-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="contact-btn">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-map-box">
+                <h2>Our Main Office</h2>
+                <div id="contactMap" class="contact-map">
+                    <noscript>
+                        <p>Please enable JavaScript to view the map.</p>
+                    </noscript>
+                </div>
+                <button id="contactFindNearestBtn" class="contact-btn contact-gps-btn">
+                    <i class="fas fa-location-arrow"></i> Find Nearest Travel Smart Office
+                </button>
+            </div>
+        </section>
+
+        <!-- Social Media Links - Improved Section -->
+        <section class="contact-social">
+            <h2>Connect With Us On Social Media</h2>
+            <div class="contact-social-links">
+                <a href="https://facebook.com/travelsmart" target="_blank" class="contact-social-link contact-fb">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://wa.me/1234567890" target="_blank" class="contact-social-link contact-wa">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://instagram.com/travelsmart" target="_blank" class="contact-social-link contact-ig">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://twitter.com/travelsmart" target="_blank" class="contact-social-link contact-tw">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+                <a href="https://linkedin.com/company/travelsmart" target="_blank" class="contact-social-link contact-li">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+                <a href="https://youtube.com/travelsmart" target="_blank" class="contact-social-link contact-yt">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="contact-faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="contact-faq-box">
+                <div class="contact-faq-item">
+                    <button class="contact-faq-question">How can I book a package? <i class="fas fa-chevron-down"></i></button>
+                    <div class="contact-faq-answer">
+                        <p>You can book a package through our website, by calling our office, or by visiting one of our locations.</p>
+                    </div>
+                </div>
+                <div class="contact-faq-item">
+                    <button class="contact-faq-question">Do you offer group discounts? <i class="fas fa-chevron-down"></i></button>
+                    <div class="contact-faq-answer">
+                        <p>Yes! We offer special discounts for groups of 10 or more.</p>
+                    </div>
+                </div>
+                <div class="contact-faq-item">
+                    <button class="contact-faq-question">What payment methods do you accept? <i class="fas fa-chevron-down"></i></button>
+                    <div class="contact-faq-answer">
+                        <p>We accept all major credit cards and bank transfers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feedback Section -->
+        <section class="contact-feedback">
+            <h2>Your Feedback Matters</h2>
+            <form id="contactFeedbackForm" class="contact-form">
+                <div class="contact-rating">
+                    <span>How was your experience with us?</span>
+                    <div class="contact-stars">
+                        <i class="far fa-star" data-rating="1"></i>
+                        <i class="far fa-star" data-rating="2"></i>
+                        <i class="far fa-star" data-rating="3"></i>
+                        <i class="far fa-star" data-rating="4"></i>
+                        <i class="far fa-star" data-rating="5"></i>
+                    </div>
+                    <input type="hidden" id="contactRatingValue" name="rating" value="0">
+                </div>
+                <div class="contact-input-group">
+                    <label for="contactFeedback">Additional Comments</label>
+                    <textarea id="contactFeedback" name="feedback" rows="3"></textarea>
+                </div>
+                <button type="submit" class="contact-btn">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+    <!-- ============================ Contact Section End ======================= -->
+
+    <!-- ================= Footer Section Start ==================== -->
+    <footer class="travel-footer">
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-about">
+                <h3>Travel Explorer</h3>
+                <p>Making your travel dreams a reality with personalized service and unforgettable experiences since
+                    2010. Discover the world with us!</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span class="tooltip">Facebook</span>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span class="tooltip">Instagram</span>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span class="tooltip">Twitter</span>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                        <span class="tooltip">YouTube</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-map-marked-alt"></i> Turiest</a></li>
+                    <li><a href="#"><i class="fas fa-suitcase"></i> Packages</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                    <li><a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a></li>
+                    <li><a href="sitemap.html"><i class="fas fa-comment-dots"></i> Sitemap</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Adventure St, Travel City, TC 12345</li>
+                    <li><i class="fas fa-phone"></i> +1 (123) 456-7890</li>
+                    <li><i class="fas fa-envelope"></i> info@travelexplorer.com</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+                <h3>Travel Newsletter</h3>
+                <p>Subscribe for exclusive travel deals, tips and destination guides</p>
+                <form id="travel-newsletter">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Travel Explorer. All rights reserved. <span>Adventure • Discovery • Memories</span></p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Travel Insurance</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Book Now Button -->
+    <div class="floating-book">
+        <button class="btn-travel-primary">
+            <i class="fas fa-plane"></i> <a href="#">Book Now</a>
+        </button>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Floating Contact Button (Right Side) -->
+    <div class="floating-contact">
+        <button class="btn-travel-contact">
+            <i class="fas fa-headset"></i> Need Help?
+        </button>
+    </div>
+    <!-- ================= Footer Section End ==================== -->
+        <script src="./scripts/script.js"></script>
+    <script src="./scripts/navbar.js"></script>
+</body>
+
+</html>
