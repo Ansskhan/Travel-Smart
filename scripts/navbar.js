@@ -54,11 +54,11 @@ header.innerHTML = `
 
             <!-- Authentication buttons -->
             <div class="auth-buttons">
-                <button class="login-btn" aria-label="Login"><a href="Login.html" style="text-decoration:none;color:blue; ">Login</a></button>
-                <button class="signup-btn" aria-label="Sign Up"><a href="Sign-Up.html" style="text-decoration:none;color:white;">Sign Up</a></button>
+                <button class="login-btn" aria-label="Login"><a href="/Login.html" style="text-decoration:none;color:blue; ">Login</a></button>
+                <button class="signup-btn" aria-label="Sign Up"><a href="/Sign-Up.html" style="text-decoration:none;color:white;">Sign Up</a></button>
             </div>
         </div>
-
+        
         <!-- Main navigation menu -->
         <nav class="main-nav" aria-label="Main navigation">
             <div class="container">
