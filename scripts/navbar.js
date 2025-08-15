@@ -65,7 +65,7 @@ header.innerHTML = `
                 <ul class="nav-links">
                     <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                     <li><a href="destinations.html"><i class="fas fa-map-marked-alt"></i> Destinations</a></li>
-                    <li><a href="/tours.html"><i class="fas fa-suitcase"></i>Tours</a></li>
+                    <li><a href="tours.html"><i class="fas fa-suitcase"></i>Tours</a></li>
                     <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
                     <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
                     <li><a href="feedback.html"><i class="fas fa-comment-alt"></i> Feedback</a></li>
