@@ -63,12 +63,12 @@ header.innerHTML = `
         <nav class="main-nav" aria-label="Main navigation">
             <div class="container">
                    <ul class="nav-links">
-                    <li><a href="/index.html"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="/destinations.html"><i class="fas fa-map-marked-alt"></i> Destinations</a></li>
-                    <li><a href="/tours.html"><i class="fas fa-suitcase"></i>Tours</a></li>
-                    <li><a href="/about.html"><i class="fas fa-info-circle"></i> About</a></li>
-                    <li><a href="/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-                    <li><a href="/feedback.html"><i class="fas fa-comment-alt"></i> Feedback</a></li>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="destinations.html"><i class="fas fa-map-marked-alt"></i> Destinations</a></li>
+                    <li><a href="tours.html"><i class="fas fa-suitcase"></i>Tours</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li><a href="feedback.html"><i class="fas fa-comment-alt"></i> Feedback</a></li>
                 </ul>
             </div>
         </nav>
@@ -105,12 +105,12 @@ footer.innerHTML = `
     <div class="footer-links" >
       <h3>Quick Links</h3>
       <ul>
-        <li><a href="index.html" ><i  class="fas fa-home"></i> Home</a></li>
-        <li><a href="destinations.html"><i class="fas fa-map-marked-alt"></i> Destinations</a></li>
-        <li><a href="tours.html"><i class="fas fa-suitcase"></i> Tours</a></li>
-        <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
-        <li><a href="contact.html"><i class="fas fa-phone-alt"></i> Contact</a></li>
-        <li><a href="sitemap.html"><i class="fas fa-phone-alt"></i> Sitemap</a></li>
+        <li><a href="/index.html" ><i  class="fas fa-home"></i> Home</a></li>
+        <li><a href="/destinations.html"><i class="fas fa-map-marked-alt"></i> Destinations</a></li>
+        <li><a href="/tours.html"><i class="fas fa-suitcase"></i> Tours</a></li>
+        <li><a href="/about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+        <li><a href="/contact.html"><i class="fas fa-phone-alt"></i> Contact</a></li>
+        <li><a href="/sitemap.html"><i class="fas fa-phone-alt"></i> Sitemap</a></li>
       </ul>
     </div>
 
